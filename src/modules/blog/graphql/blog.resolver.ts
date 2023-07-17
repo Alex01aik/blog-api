@@ -1,17 +1,17 @@
 import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
-import { UniqueArgs } from 'src/common/graphql/args/UniqueArgs';
-import { SuccessOutput } from 'src/common/graphql/dto/SuccessOutput';
+import { UniqueArgs } from '../../../common/graphql/args/UniqueArgs';
+import { SuccessOutput } from '../../../common/graphql/dto/SuccessOutput';
 import { BlogService } from '../blog.service';
 import { Blog } from './blog.entity';
 import { CreateOneBlogArgs } from './args/CreateOneBlogArgs';
 import { UpdateOneBlogArgs } from './args/UpdateOneBlogArgs';
-import { CurrentUser } from 'src/modules/auth/utils/CurrentUserDecorator';
-import { User } from 'src/modules/user/graphql/user.entity';
-import { isOwnerOrAllowedRole } from 'src/modules/auth/utils/isOwnerOrAllowedRole';
-import { UserRole } from 'src/modules/auth/graphql/userRole.enum';
+import { CurrentUser } from '../../auth/utils/CurrentUserDecorator';
+import { User } from '../../user/graphql/user.entity';
+import { isOwnerOrAllowedRole } from '../../auth/utils/isOwnerOrAllowedRole';
+import { UserRole } from '../../auth/graphql/userRole.enum';
 import { UseGuards } from '@nestjs/common';
-import { JwtGuard } from 'src/modules/auth/guard/jwt.guard';
-import { PaginationArgs } from 'src/common/graphql/args/PaginationArgs';
+import { JwtGuard } from '../../auth/guard/jwt.guard';
+import { PaginationArgs } from '../../../common/graphql/args/PaginationArgs';
 import { FindManyBlogsArgs } from './args/FindManyBlogsArgs';
 
 @Resolver(() => Blog)

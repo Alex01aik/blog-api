@@ -4,7 +4,7 @@ import { Repository } from 'typeorm';
 import { Post } from './graphql/post.entity';
 import { CreateOnePostArgs } from './graphql/args/CreateOnePostArgs';
 import { UpdateOnePostArgs } from './graphql/args/UpdateOnePostArgs';
-import { isExist } from 'src/common/utils/isExist';
+import { isExist } from '../../common/utils/isExist';
 import { FindManyPostsArgs } from './graphql/args/FindManyPostsArgs';
 
 @Injectable()

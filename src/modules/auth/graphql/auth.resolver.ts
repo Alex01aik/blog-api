@@ -4,7 +4,7 @@ import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
 import { LoginArgs } from './args/LoginArgs';
 import { Tokens } from './models/Tokens';
 import { RefreshArgs } from './args/RefreshArgs';
-import { UserService } from 'src/modules/user/user.service';
+import { UserService } from '../../user/user.service';
 
 @Resolver()
 export class AuthResolver {

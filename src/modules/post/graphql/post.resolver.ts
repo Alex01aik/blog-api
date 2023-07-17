@@ -1,18 +1,18 @@
 import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
 import { PostService } from '../post.service';
 import { Post } from './post.entity';
-import { UniqueArgs } from 'src/common/graphql/args/UniqueArgs';
+import { UniqueArgs } from '../../../common/graphql/args/UniqueArgs';
 import { CreateOnePostArgs } from './args/CreateOnePostArgs';
 import { UpdateOnePostArgs } from './args/UpdateOnePostArgs';
-import { SuccessOutput } from 'src/common/graphql/dto/SuccessOutput';
-import { CurrentUser } from 'src/modules/auth/utils/CurrentUserDecorator';
-import { User } from 'src/modules/user/graphql/user.entity';
-import { isOwnerOrAllowedRole } from 'src/modules/auth/utils/isOwnerOrAllowedRole';
-import { UserRole } from 'src/modules/auth/graphql/userRole.enum';
-import { BlogService } from 'src/modules/blog/blog.service';
-import { Blog } from 'src/modules/blog/graphql/blog.entity';
+import { SuccessOutput } from '../../../common/graphql/dto/SuccessOutput';
+import { CurrentUser } from '../../auth/utils/CurrentUserDecorator';
+import { User } from '../../user/graphql/user.entity';
+import { isOwnerOrAllowedRole } from '../../auth/utils/isOwnerOrAllowedRole';
+import { UserRole } from '../../auth/graphql/userRole.enum';
+import { BlogService } from '../../blog/blog.service';
+import { Blog } from '../../blog/graphql/blog.entity';
 import { UseGuards } from '@nestjs/common';
-import { JwtGuard } from 'src/modules/auth/guard/jwt.guard';
+import { JwtGuard } from '../../auth/guard/jwt.guard';
 import { FindManyPostsArgs } from './args/FindManyPostsArgs';
 
 @Resolver(() => Post)

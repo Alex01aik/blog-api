@@ -2,13 +2,13 @@ import { Resolver, Mutation, Args } from '@nestjs/graphql';
 import { UserService } from '../user.service';
 import { User } from './user.entity';
 import { UpdateOneUserArgs } from './args/UpdateOneUserArgs';
-import { UniqueArgs } from 'src/common/graphql/args/UniqueArgs';
-import { SuccessOutput } from 'src/common/graphql/dto/SuccessOutput';
+import { UniqueArgs } from '../../../common/graphql/args/UniqueArgs';
+import { SuccessOutput } from '../../../common/graphql/dto/SuccessOutput';
 import { UseGuards } from '@nestjs/common';
-import { UserRole } from 'src/modules/auth/graphql/userRole.enum';
-import { Roles } from 'src/modules/auth/utils/RolesDecorator';
-import { RoleGuard } from 'src/modules/auth/guard/role.guard';
-import { AllowOwner } from 'src/modules/auth/utils/AllowOwnerDecorator';
+import { UserRole } from '../../auth/graphql/userRole.enum';
+import { Roles } from '../../auth/utils/RolesDecorator';
+import { RoleGuard } from '../../auth/guard/role.guard';
+import { AllowOwner } from '../../auth/utils/AllowOwnerDecorator';
 
 @Resolver(() => User)
 export class UserResolver {

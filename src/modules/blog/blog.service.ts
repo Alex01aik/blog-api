@@ -4,7 +4,7 @@ import { Repository } from 'typeorm';
 import { Blog } from './graphql/blog.entity';
 import { CreateOneBlogArgs } from './graphql/args/CreateOneBlogArgs';
 import { UpdateOneBlogArgs } from './graphql/args/UpdateOneBlogArgs';
-import { isExist } from 'src/common/utils/isExist';
+import { isExist } from '../../common/utils/isExist';
 import { FindManyBlogsArgs } from './graphql/args/FindManyBlogsArgs';
 
 @Injectable()
